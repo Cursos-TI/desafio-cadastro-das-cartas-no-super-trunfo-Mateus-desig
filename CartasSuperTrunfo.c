@@ -8,7 +8,7 @@
 
 int main()
 {
-    // Declarando variaveis dos dados das cartas.
+  // Declarando variáveis dos dados das cartas.
     char state1, state2;          // Estado da cidade (letra de 'A' a 'H').
     char code1[4], code2[4];      // Código da carta (ex: A01, B03).
     char name1[50], name2[50];    // Nome da cidade.
@@ -19,25 +19,34 @@ int main()
 
     // Primeira Carta.
     printf("Digite o estado da primeira carta (A-H): ");
-    scanf("%x", &state1);
+    scanf(" %c", &state1);
+    state1 = toupper(state1); // Garante que o estado seja maiúsculo.
+
+    // Validação do estado.
+    if (state1 < 'A' || state1 > 'H') {
+        printf("Estado inválido! Deve ser uma letra de A a H.\n");
+        return 1; // Encerra o programa com erro.
+    }
 
     printf("Digite o código da primeira carta (ex: A01): ");
-    scanf(" %c", &state1);
+    scanf("%3s", code1); // Lê até 3 caracteres (tamanho do código).
 
     printf("Digite o nome da cidade da primeira carta: ");
-    scanf(" %[^\n]", name1);
+    scanf(" %[^\n]", name1); // Lê o nome da cidade com espaços.
 
     printf("Digite a população da cidade: ");
-    scanf(" %d", &population1); 
+    scanf("%d", &population1);
 
     printf("Digite a área da cidade (km²): ");
-    scanf(" %f", &area1); 
-    
+    scanf("%f", &area1);
+
     printf("Digite o PIB da cidade (em bilhões de reais): ");
-    scanf(" %f", &pib1);
-    
+    scanf("%f", &pib1);
+
     printf("Digite o número de pontos turísticos: ");
-    scanf(" %d", &tourist_pt1);
+    scanf("%d", &tourist_pt1);
+
+    // Exibindo os dados da primeira carta.
 
     // Sugestão: Defina variáveis separadas para cada atributo da cidade.
     // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
