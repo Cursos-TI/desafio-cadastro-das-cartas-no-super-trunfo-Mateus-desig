@@ -73,18 +73,18 @@ void cards()
     printf("\n");
 
     // Segunda Carta.
-    printf("Digite o estado da segunda carta (A-H): ");
+    printf("Digite o estado da segunda carta (B-Z): ");
     scanf(" %c", &state2);
     state2 = toupper(state2); // Garante que o estado seja maiúsculo.
 
     // Validação do estado.
-    if (state2 < 'A' || state2 > 'H')
+    if (state2 < 'B' || state2 > 'Z')
     {
         printf("Estado inválido! Deve ser uma letra de A a H.\n");
         return 2; // Encerra o programa com erro.
     }
 
-    printf("Digite o código da segunda carta (ex: A02): ");
+    printf("Digite o código da segunda carta (ex: B02): ");
     scanf("%3s", code2); // Lê até 3 caracteres (tamanho do código).
 
     printf("Digite o nome da cidade da segunda carta: ");
