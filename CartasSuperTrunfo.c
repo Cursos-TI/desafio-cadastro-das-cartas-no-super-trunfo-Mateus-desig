@@ -17,8 +17,27 @@ int main()
     float pib1, pib2;             // PIB da cidade em bilhões de reais.
     int tourist_pt1, tourist_pt2; // Número de pontos turísticos.
 
-    
+    // Primeira Carta.
+    printf("Digite o estado da primeira carta (A-H): ");
+    scanf("%x", &state1);
 
+    printf("Digite o código da primeira carta (ex: A01): ");
+    scanf(" %c", &state1);
+
+    printf("Digite o nome da cidade da primeira carta: ");
+    scanf(" %[^\n]", name1);
+
+    printf("Digite a população da cidade: ");
+    scanf(" %d", &population1); 
+
+    printf("Digite a área da cidade (km²): ");
+    scanf(" %f", &area1); 
+    
+    printf("Digite o PIB da cidade (em bilhões de reais): ");
+    scanf(" %f", &pib1);
+    
+    printf("Digite o número de pontos turísticos: ");
+    scanf(" %d", &tourist_pt1);
 
     // Sugestão: Defina variáveis separadas para cada atributo da cidade.
     // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
